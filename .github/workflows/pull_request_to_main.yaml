@@ -9,8 +9,6 @@ on:
 jobs:
   build:
     permissions:
-      actions: write
-      checks: write
       id-token: write
       pages: write
     runs-on: ubuntu-latest
