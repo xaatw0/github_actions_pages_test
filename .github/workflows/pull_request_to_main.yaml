@@ -13,12 +13,12 @@ jobs:
       checks: write
       contents: write
       deployments: write
-      issues: write
-      packages: write
       pull-requests: write
       repository-projects: write
       security-events: write
       statuses: write
+      id-token: write
+      pages: write
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -41,14 +41,6 @@ jobs:
       - run: flutter pub get
       - run: flutter build web --web-renderer html --base-href /${{ steps.version.outputs.repository }}/
 
-  deploy:
-    permissions:
-      id-token: write
-      pages: write
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-
-    steps:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
