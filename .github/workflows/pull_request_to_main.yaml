@@ -12,7 +12,6 @@ jobs:
       actions: write
       checks: write
       contents: write
-      deployments: write
       pull-requests: write
       id-token: write
       pages: write
